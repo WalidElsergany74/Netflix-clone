@@ -4,7 +4,7 @@ import { authOptions } from "@/server/auth";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
 
-// دالة لجلب الأفلام من قاعدة البيانات
+
 async function getData(category: string, userId: string) {
   return await db.movie.findMany({
     where: { category },
@@ -27,7 +27,6 @@ export default async function CategoryPage({
 }: {
   params: { category: string };
 }) {
-  // ✅ تأكد أن `params.category` جاهز قبل الاستخدام
   if (!params || !params.category) {
     return <div className="text-center text-xl font-bold">Category not found</div>;
   }
