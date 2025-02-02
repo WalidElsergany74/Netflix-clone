@@ -5,6 +5,11 @@ import { authOptions } from "@/server/auth";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
 
+
+interface CategoryPageProps {
+  params: { genre: string };
+}
+
 async function getData(category: string, userId: string) {
   switch (category) {
     case "shows": {
@@ -84,13 +89,10 @@ async function getData(category: string, userId: string) {
   }
 }
 
-export default async function CategoryPage({
-  params,
-}: {
-  params: { genre: string };
-}) {
+export default async function CategoryPage({ params }: CategoryPageProps)  {
+    const genre = params?.genre || "movies";
   const session = await getServerSession(authOptions);
-  const data = await getData(params.genre, session?.user?.email as string);
+  const data = await getData(genre, session?.user?.email as string);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-5 sm:px-0 mt-10 gap-6">
