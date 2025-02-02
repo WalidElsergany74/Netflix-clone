@@ -18,9 +18,9 @@ interface linkProps {
 
 const links: linkProps[] = [
   { name: "Home", href: "/" },
-  { name: "Tv Shows", href: "/shows" },
-  { name: "Movies", href: "/movies" },
-  { name: "Recently Added", href: "/recently" },
+  { name: "Tv Shows", href: "/category/show" },
+  { name: "Movies", href: "/category/movie" },
+  { name: "Recently Added", href: "/category/recent" },
   { name: "My List", href: "/user/list" },
 ];
 
