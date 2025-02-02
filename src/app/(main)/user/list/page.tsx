@@ -35,7 +35,7 @@ export default async function Watchlist() {
 
   return (
     <>
-      <h1 className="text-white text-4xl font-bold underline mt-10 px-5 sm:px-0">
+      <h1 className="text-white text-4xl font-bold underline mt-10 px-5 sm:px-0 pb-6">
         Your Watchlist
       </h1>
       {data.length === 0 ? (

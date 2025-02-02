@@ -47,7 +47,7 @@ export default async function RecentlyAdded() {
             className="rounded-sm absolute w-full h-full object-cover"
           />
 
-          <div className="h-full relative z-10 w-full transform transition duration-500 hover:scale-110 opacity-0 hover:opacity-100"> {/* تقليل قيمة scale */}
+          <div className="h-full relative z-10 w-full transform transition duration-500 hover:scale-110  md:hover:scale-105  lg:hover:scale-125 opacity-0 hover:opacity-100"> {/* تقليل قيمة scale */}
             <div className="bg-gradient-to-b from-transparent via-black/50 to-black z-10 w-full h-full rounded-lg flex items-center justify-center border">
               <Image
                 src={movie.imageString}

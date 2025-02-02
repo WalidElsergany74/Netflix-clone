@@ -1,3 +1,4 @@
+"use client"
 import {  signOut, useSession } from "next-auth/react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
@@ -7,7 +8,7 @@ export default function UserNav() {
   const { data: session } = useSession();
   
   if (!session?.user) {
-    return null; 
+    return null;
   }
 
   const user = session.user;
